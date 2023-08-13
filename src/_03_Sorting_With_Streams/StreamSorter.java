@@ -9,23 +9,25 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import javax.swing.event.ListSelectionEvent;
+
 import org.junit.jupiter.api.Test;
 
 /*
  * Use streams to complete both sort methods:
  * 1. Sort the array from smallest to largest
- *    Use the .toArray() stream method to return an array
+ *    Use the .toArray() stream met hod to return an array
  * 2. Sort the list alphabetically from a -> z.
  *    Use the .collect(Collectors.toList()) stream method to return a list
  */
 public class StreamSorter {
 
     int[] sortArray(int[] arr) {
-        return null;
+        return Arrays.stream(arr).sorted().toArray();
     }
 
     List<String> sortList(List<String> list) {
-        return null;
+        return list.stream().sorted().collect(Collectors.toList());
     }
     
     // =================== DO NOT MODIFY THE CODE BELOW ======================
